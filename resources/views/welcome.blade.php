@@ -21,8 +21,8 @@
         </style>
     </head>
     <body class="antialiased">
-        <a href="/contacts">All contacts</a>
-        <a href="/contacts/create">Add contact</a>
-        <a href="/contacts/1">Show a contact</a>
+        <a href="{{ route('contacts.index') }}">All contacts</a>
+        <a href="{{ route('contacts.create') }}">Add contact</a>
+        <a href="{{ route('contacts.show', 1) }}">Show a contact</a>
     </body>
 </html>
