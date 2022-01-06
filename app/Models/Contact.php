@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Scopes\FilterScope;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Contact extends Model
 {
@@ -21,15 +22,8 @@ class Contact extends Model
         return $query->orderBy('id', 'desc');
     }
 
-    public function scopeFilter($query)
+    public static function booted()
     {
-        if ($companyId = request()->query('company_id')) {
-            $query->where('company_id', $companyId);
-        }
-        if ($search = request()->query('search')) {
-            $query->where('first_name', 'LIKE', "%{$search}%");
-        }
-
-        return $query;
+        static::addGlobalScope(new FilterScope);
     }
 }
