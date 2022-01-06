@@ -12,8 +12,5 @@ class FilterScope implements Scope
         if ($companyId = request()->query('company_id')) {
             $builder->where('company_id', $companyId);
         }
-        if ($search = request()->query('search')) {
-            $builder->where('first_name', 'LIKE', "%{$search}%");
-        }
     }
 }
