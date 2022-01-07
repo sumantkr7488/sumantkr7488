@@ -12,7 +12,8 @@ class Contact extends Model
     use HasFactory;
 
     protected $fillable = ['first_name', 'last_name', 'email', 'phone', 'address', 'company_id'];
-
+    public $filterColumns = ['company_id'];
+    
     public function company()
     {
         return $this->belongsTo(Company::class);
