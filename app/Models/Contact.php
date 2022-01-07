@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use App\Scopes\FilterScope;
-use App\Scopes\SearchScope;
+use App\Scopes\ContactSearchScope;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -26,6 +26,6 @@ class Contact extends Model
     public static function booted()
     {
         static::addGlobalScope(new FilterScope);
-        static::addGlobalScope(new SearchScope);
+        static::addGlobalScope(new ContactSearchScope);
     }
 }
