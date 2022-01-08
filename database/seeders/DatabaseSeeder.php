@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\User;
 use App\Models\Company;
 use App\Models\Contact;
 use Illuminate\Database\Seeder;
@@ -15,6 +16,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Company::factory()->hasContacts(5)->count(10)->create();
+        User::factory()->count(5)->create();
+        Company::factory()->hasContacts(5)->count(50)->create();
     }
 }
