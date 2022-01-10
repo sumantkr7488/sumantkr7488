@@ -23,12 +23,13 @@ Route::get('/', function () {
 
 // Route::get('/contacts/{contact}/edit', [ContactController::class, 'edit'])->name('contacts.edit');
 // Route::resource('/contacts', ContactController::class);
+Route::resource('/companies.contacts', ContactController::class);
 // Route::resource('/contacts', ContactController::class)->only(['create', 'store', 'edit', 'update', 'destroy']);
 // Route::resource('/contacts', ContactController::class)->except(['index', 'show']);
-Route::resources([
-    '/contacts' => ContactController::class,
-    '/companies' => CompanyController::class
-]);
+// Route::resources([
+//     '/contacts' => ContactController::class,
+//     '/companies' => CompanyController::class
+// ]);
 
 Auth::routes(['verify' => true]);
 
