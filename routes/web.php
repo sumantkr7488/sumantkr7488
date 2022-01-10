@@ -22,7 +22,7 @@ Route::get('/', function () {
 // Route::delete('/contacts/{contact}', [ContactController::class, 'destroy'])->name('contacts.destroy');
 
 // Route::get('/contacts/{contact}/edit', [ContactController::class, 'edit'])->name('contacts.edit');
-// Route::resource('/contacts', ContactController::class);
+Route::resource('/contacts', ContactController::class);
 // Route::resource('/contacts', ContactController::class)->parameters([
 //     'contacts' => 'kontak',
 // ]);
