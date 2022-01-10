@@ -21,7 +21,6 @@ class ContactFactory extends Factory
             'phone'      => $this->faker->phoneNumber(),
             'email'      => $this->faker->email(),
             'address'    => $this->faker->address(),
-            'user_id'    => Company::find(Company::pluck('id')->random())->user_id
         ];
     }
 }
