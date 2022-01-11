@@ -17,7 +17,7 @@
                 </div>
               </div>
             <div class="card-body">
-              {{-- @include('companies._filter') --}}
+              @include('companies._filter')
               <table class="table table-striped table-hover">
                 <thead>
                   <tr>
