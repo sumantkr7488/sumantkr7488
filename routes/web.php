@@ -9,7 +9,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('/contacts', ContactController::class);
+Route::resources([
+    '/contacts'  => ContactController::class,
+    '/companies' => CompanyController::class
+]);
 
 Auth::routes(['verify' => true]);
 
